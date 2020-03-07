@@ -9,12 +9,16 @@ namespace Default.Api.Configurations
     {
         public static IApplicationBuilder UseGlobalizationConfiguration(this IApplicationBuilder app)
         {
-            var defaultCulture = new CultureInfo("pt-BR");
+            var supportedCultures = new []
+            {
+                new CultureInfo("pt-BR"),
+                new CultureInfo("en-US"),
+            };
             var localizationOptions = new RequestLocalizationOptions
             {
-                DefaultRequestCulture = new RequestCulture(defaultCulture),
-                SupportedCultures = new List<CultureInfo> { defaultCulture },
-                SupportedUICultures = new List<CultureInfo> { defaultCulture }
+                DefaultRequestCulture = new RequestCulture("pt-BR"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures =  supportedCultures,
             };
             app.UseRequestLocalization(localizationOptions);
 

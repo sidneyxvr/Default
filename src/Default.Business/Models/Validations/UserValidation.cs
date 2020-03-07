@@ -6,7 +6,9 @@ namespace Default.Business.Models.Validations
     {
         public UserValidation()
         {
-            RuleFor(a => a.Email).EmailAddress();
+            RuleFor(user => user.Email).EmailAddress();
+
+            RuleFor(user => user.Name).NotEmpty();
         }
     }
 }

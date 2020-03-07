@@ -1,9 +1,7 @@
 using AutoMapper;
 using Default.Api.Configurations;
-using Default.Api.Configurations;
-using Default.Api.Extensions;
-using Default.Data.Context;
 using Default.Api.Middlewares;
+using Default.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
