@@ -10,6 +10,6 @@ namespace Default.Tests
 
         [Fact]
         public void Test2()
-            => Assert.False(false);
+            => Assert.False(true);
     }
 }
